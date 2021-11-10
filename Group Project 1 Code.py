@@ -1,5 +1,5 @@
-users = {'Alex': ['taylor swift', 'hannah montana', 'juice world']
-         'Skye': ['hannah montana', 'childish gambino', 'the beetles']
+users = {'Alex': ['taylor swift', 'hannah montana', 'juice world'],
+         'Skye': ['hannah montana', 'childish gambino', 'the beetles'],
          'Luke': ['pop smoke', 'hannah montana', 'crumb', 'acdc']}
 likes = {}
 def isPrivate(user):
