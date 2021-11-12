@@ -47,6 +47,7 @@ def write_file(string, filename):
     myfile.close()
     
 def saveAndQuit(user_prefs):
+    """Updates the .txt file with new users and liked artists. Quits the program"""
     finalString=""
     for person in user_prefs.keys():
         finalString=finalString+person+":"
@@ -126,6 +127,8 @@ def numMatches(userPrefs, allUsersPrefs):
     return count
 
 def getRec(userName, users):
+    """Provides recomendations of artists from one other
+    user that has the most in-common artists with the operating user."""
     max_matches = 0
     numDifferences=0
     nameOfBestMatch=''
@@ -145,6 +148,7 @@ def getRec(userName, users):
                 copyListBestMatch.remove(item)
         return copyListBestMatch
 def howPopIsMostPopArtist(artists_count):
+    """Prints the number of likes the most popular artist recieved"""
     maxNum = 0
     maxName = ''
     for key in artists_count:
@@ -155,6 +159,8 @@ def howPopIsMostPopArtist(artists_count):
         return "Sorry , no artists found."
     return artists_count[maxName]
 def whichUserLikesTheMostArtists(user_prefs):
+    """Prints the full name of the user who likes the most artists.
+    (Has the most artists in their value list)."""
     maxNum = 0
     maxName = ''
     for key in user_prefs:
@@ -172,6 +178,7 @@ def deepCopyDic(artists_count):
         newCopy[key]=artists_count[key]
     return newCopy
 def showMostPopularArtist(artists_count):
+    """Print the top 3 artists that are liked by the most users."""
     #copyArtists=deepCopyDic(artists_count)
     topArtists = []
     maxName =''
